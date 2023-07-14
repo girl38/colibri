@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cool Buttons</title>
+  <style>
+section {
+  padding: 30vh 0;
+}
+
+.one {
+  background: #FFC145;
+  position: relative;
+}
+
+.two {
+  background: #FF6B6c;
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 10vw), 0 100%);
+  position: relative;
+  margin-bottom: -10vw;
+}
+
+.one div {
+  color: rgba(0,0,0,0.3); 
+  background: rgba(0,0,0,0.3);
+  width: 150px;
+  height: 150px; 
+  margin: 0 auto;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  font-size: 3em;
+}
+
+body {
+  text-align: center;
+  color: white;
+  margin: 0;
+}
+
+.two img {
+  clip-path: circle(200px);
+}  
+
+.one::before,
+.one::after {
+  position: absolute;
+  content:'';
+  background: #FFC145;
+  width: 150px;
+  height: 150px;
+  z-index: 100;
+  bottom: -1em;
+}
+
+.one::before {
+  left: 50%;
+  transform: skew(0, -20deg);
+}
+
+.one::after {
+  right: 50%;
+  transform: skew(0, 20deg);
+}
+
+.three {
+  background: #5B5F97;
+}        
+   
+  </style>
+</head>
+<body>
+<section class="one">
+  <h1>Section One</h1>
+  <div>:)</div>
+</section>
+<section class="two">
+  <h1>Section two</h1>
+  <img src="https://pixabay.com/images/download/rufus-8041082_640.jpg">	
+</section>
+<section class="three">
+  <h1>Section Three</h1>
+</section>  
+</body>
+</html>
